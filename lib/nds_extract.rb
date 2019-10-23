@@ -31,15 +31,31 @@ end
 
 def total_gross(source)
   # 1. directors_totals: returns a Hash of { dir_name => gross }
-  #  2. list_of_directors: names provides an Array of directors names (use
+  result = {}
+  director_index = 0
+  while director_index < source.size do
+    director = source[director_index]
+    result[director[:name]] = gross_for_director(director)
+    director_index += 1
+  end
+  result
+  #  2. list_of_directors: names provides an Array of directors names
+  index = 0
+  names = []
+  while index < source.size do
+    names << source[index][:name]
+    index +=1
+  end
+  p names
+  
   row = 0
   while row < source.length do
     element = 0
-    while element < source[row].length
-      total += directors_totals[row][element]
+    while element < names.length
+      total += directors_totals[names[element]]
       element += 1
     end
     row += 1
   end
-  total
+  p total
 end
