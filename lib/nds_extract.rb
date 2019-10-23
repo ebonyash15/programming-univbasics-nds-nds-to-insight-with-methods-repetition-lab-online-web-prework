@@ -36,15 +36,10 @@ def total_gross(source)
   while row < source.length do
     element = 0
     while element < source[row].length
-      p directors_totals(source)
-      p list_of_directors(source)[row]
-      total += directors_totals
+      total += directors_totals[row][element]
       element += 1
     end
     row += 1
   end
   total
-  # Visit each key (i.e. director name), look up the value in the hash
-  # returned by directors_totals, and add it to a running total. When done,
-  # return the total
 end
