@@ -10,18 +10,15 @@ def directors_totals(source)
   end
   result
 end
-
 def gross_for_director(d)
   total = 0
   index = 0
-
   while index < d[:movies].length do
     total += d[:movies][index][:worldwide_gross]
     index += 1
   end
   total
 end
-
 def list_of_directors(source)
   index = 0
   names = []
@@ -34,14 +31,13 @@ end
 
 def total_gross(source)
   # 1. directors_totals: returns a Hash of { dir_name => gross }
-  directors_totals(source)
-  list_of_directors(source)
   #  2. list_of_directors: names provides an Array of directors names (use
   row = 0
   while row < source.length do
     element = 0
     while element < source[row].length
-      total += source[row][element]
+      p directors_totals(directors_database)[list_of_directors[row]]
+      total += directors_totals
       element += 1
     end
     row += 1
