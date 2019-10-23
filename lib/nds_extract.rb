@@ -53,7 +53,8 @@ def total_gross(source)
     element = 0
     while element < names.length
     p  name = names[element]
-    p  total += result[name]
+      total += result[name]
+    p total
       element += 1
     end
     row += 1
