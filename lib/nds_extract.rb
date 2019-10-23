@@ -47,12 +47,13 @@ def total_gross(source)
     index +=1
   end
   p names
-
+#####
   row = 0
-  while row < source.length do
+  while row < result.length do
     element = 0
     while element < names.length
-      total += directors_totals[names[element]]
+    p  name = names[element]
+    p  total += result[name]
       element += 1
     end
     row += 1
