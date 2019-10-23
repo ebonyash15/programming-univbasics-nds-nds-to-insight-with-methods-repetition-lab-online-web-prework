@@ -36,7 +36,8 @@ def total_gross(source)
   while row < source.length do
     element = 0
     while element < source[row].length
-      p directors_totals(source)[list_of_directors(source)[row]]
+      p directors_totals(source)
+      p list_of_directors(source)[row]
       total += directors_totals
       element += 1
     end
