@@ -47,7 +47,7 @@ def total_gross(source)
     index +=1
   end
   p names
-  
+
   row = 0
   while row < source.length do
     element = 0
