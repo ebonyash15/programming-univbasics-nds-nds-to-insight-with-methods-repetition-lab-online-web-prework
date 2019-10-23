@@ -35,7 +35,7 @@ def total_gross(source)
   # 1. directors_totals: returns a Hash of { dir_name => gross }
   directors_totals(d)
   list_of_directors(source)
-  # 2. list_of_directors: names provides an Array of directors names (use
+  #  2. list_of_directors: names provides an Array of directors names (use
   row = 0
   while row < source.length do
     element = 0
@@ -46,7 +46,6 @@ def total_gross(source)
     row += 1
   end
   total
-  end
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
